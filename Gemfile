@@ -9,12 +9,15 @@ group :development do
   gem 'sqlite3'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'haml-rails'
 end
 
 # Use Puma web sever
 gem 'puma'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
+# Use haml templates
+gem 'haml'
 # Figaro for configuration
 gem 'figaro'
 # Use SCSS for stylesheets
