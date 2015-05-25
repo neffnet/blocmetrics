@@ -12,6 +12,8 @@ group :development do
   gem 'haml-rails'
 end
 
+# Devise for user authentication
+gem 'devise'
 # Use Puma web sever
 gem 'puma'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
