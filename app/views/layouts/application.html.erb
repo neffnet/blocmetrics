@@ -11,9 +11,15 @@
   </head>
 
   <body>
-
+  <div id="container" class="pure-g">
+    <div id="left-bar" class="pure-u-1-5">
+      <h2>BlocMetrics</h2>
+    </div>
+    <div id="main-content" class="pure-u-4-5">
 <%= render 'welcome/show_flash' %>
     <%= yield %>
+    </div>
 
+  </div>
   </body>
 </html>

@@ -15,3 +15,15 @@
  *= require purecss
 
  */
+
+$red: #C30B38;
+$orange: #D1610F;
+$greenish: #B3A724;
+$bluish: #92BBAA;
+$gray: #605058;
+
+#left-bar {
+  background-color: $red;
+  color: $bluish;
+  text-align: center;
+}
