@@ -13,6 +13,8 @@ group :development do
 end
 # Yahoo PureCSS framework
 gem 'purecss-rails'
+# Simple Form helper
+gem 'simple_form'
 # Devise for user authentication
 gem 'devise'
 # Use Puma web sever
