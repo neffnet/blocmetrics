@@ -19,8 +19,21 @@
 $red: #C30B38;
 $orange: #D1610F;
 $greenish: #B3A724;
+$green: #5FB324;
 $bluish: #92BBAA;
 $gray: #605058;
+
+#main-flash {
+  position: fixed;
+  z-index: 3;
+  right: 5em;
+  top: 2.1em;
+  padding: 1em;
+  border-radius: 1em;
+  opacity: 0.9;
+}
+#main-flash.success { background-color: $green; }
+#main-flash.alert { background-color: $orange; }
 
 .pad-box {
   padding: 1em;

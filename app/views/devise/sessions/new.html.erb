@@ -1,16 +1,16 @@
 <h2>Log in</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name) html: {class: 'pure-form pure-form-stacked'}) do |f| %>
+<%= simple_form_for( resource, as: resource_name, url: session_path(resource_name), html: {class: 'pure-form pure-form-stacked'} ) do |f| %>
   
   <%= f.input :username, autofocus: true, placeholder:'username' %>
-  <%= f.input :password, autocomplete: "off" %>
+  <%= f.input :password, autocomplete: "off", placeholder: 'password' %>
 
-  <% if devise_mapping.rememberable? -%>
+  <% if devise_mapping.rememberable? %>
     <div class="field">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
-  <% end -%>
+  <% end %>
 
     <%= f.submit "Log in" %>
 
