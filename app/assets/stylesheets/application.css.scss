@@ -22,6 +22,18 @@ $greenish: #B3A724;
 $bluish: #92BBAA;
 $gray: #605058;
 
+.pad-box {
+  padding: 1em;
+}
+#top-bar {
+  background-color: $red;
+
+    #about {
+      position: relative;
+      text-align: right;
+      right: 4em;
+    }
+}
 #left-bar {
   background-color: $red;
   color: $bluish;

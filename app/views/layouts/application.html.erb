@@ -12,6 +12,21 @@
 
   <body>
   <div id="container" class="pure-g">
+
+  <div id="top-bar" class="pure-g">
+    <div class="pad-box">
+      <div id="user-status" class="pure-u-2-5">
+      <% if current_user %>
+        <span>Welcome, #{current_user.username}</span>
+      <% else %>
+        <%= link_to "Sign In", new_user_session_path %> || <%= link_to "Sign Up", new_user_registration_path %></span>
+      <% end %>
+      </div>
+      <div id="about" class="pure-u-3-5">
+        <%= link_to "About", welcome_about_path %>
+      </div>
+    </div>
+  </div>
     <div id="left-bar" class="pure-u-1-5">
       <h2>BlocMetrics</h2>
     </div>
