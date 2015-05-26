@@ -1,0 +1,6 @@
+- flashes = {:notice => 'success', :alert => 'alert', :error => 'alert'}
+- flashes.each do |key, value|
+  - if flash[key]
+    #main-flash{'class' => value}
+      = flash[key]
+      %a.close{'href' => '#'} &times;
