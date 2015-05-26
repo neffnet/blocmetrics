@@ -11,7 +11,8 @@ group :development do
   gem 'binding_of_caller'
   gem 'haml-rails'
 end
-
+# Yahoo PureCSS framework
+gem 'purecss-rails'
 # Devise for user authentication
 gem 'devise'
 # Use Puma web sever
