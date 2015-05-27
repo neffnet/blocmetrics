@@ -23,6 +23,11 @@ $green: #5FB324;
 $bluish: #92BBAA;
 $gray: #605058;
 
+body {
+  background-color: $bluish;
+  a:visited{color:inherit;}
+}
+
 #main-flash {
   position: fixed;
   z-index: 3;
@@ -38,8 +43,17 @@ $gray: #605058;
 .pad-box {
   padding: 1em;
 }
+
 #top-bar {
   background-color: $red;
+
+    a {
+      color: $gray;
+      font-weight: bold;
+    }
+    a:hover {
+      color: gray;
+    }
 
     #about {
       position: relative;
@@ -51,4 +65,5 @@ $gray: #605058;
   background-color: $red;
   color: $bluish;
   text-align: center;
+  min-height: 50em;
 }
