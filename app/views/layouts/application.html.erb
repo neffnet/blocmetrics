@@ -19,13 +19,19 @@
     </div>
     <div id="user-status">
       <% if current_user %>
-        <span>Welcome, <%= link_to current_user.username, edit_user_registration_path %> || <%= link_to "Log out", destroy_user_session_path, method: :delete %></span>
+        <span>Welcome, <%= current_user.username %> || <%= link_to "Log out", destroy_user_session_path, method: :delete %></span>
       <% else %>
         <%= render 'devise/sessions/sign_in' %>
       <% end %>
     </div>
-    <%= link_to "About", welcome_about_path %>
-  </div></div>
+<ul id="left-links">
+    <% if current_user %>
+      <li><%= link_to "User Details", edit_user_registration_path %></li>
+    <% end %>
+    <li><%= link_to "About", welcome_about_path %></li>
+</ul>
+  </div></div><!-- /left-bar -->
+
   <div id="main-content" class="pure-u-4-5">
     <div class="pad-box">
 <%= render 'welcome/show_flash' %>
