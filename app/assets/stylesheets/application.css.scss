@@ -54,7 +54,7 @@ body {
 #left-bar {
   background-color: $red;
   color: $bluish;
-  min-height: 450px;
+  min-height: 575px;
   word-wrap: break-word;
   border-radius: 0 15em/1.1em;
   
@@ -107,6 +107,18 @@ body {
     left: -10px;
     top: -1em;
   }
+}
+
+#user-show {
+
+  #user-stats {
+
+    .pad-box {
+      min-height: 500px;
+      border-left: 2px solid $gray;
+    }
+  }
+
 }
 
 #home-link {
