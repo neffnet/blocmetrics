@@ -3,5 +3,7 @@
   = simple_form_for(:user, :url => session_path(:user), :html => {:class => 'pure-form pure-form-stacked'}) do |f|
     = f.input :username, autofocus: true, placeholder: 'username', label: false
     = f.input :password, placeholder: 'password', label: false
-    = f.button :submit, 'Sign In', class: 'pure-button-primary'
+    = f.button :submit, 'Sign In', class: 'pure-button-primary sign_in_btn'
+    %a{ :href => new_user_registration_path }
+      =button_tag('Sign Up', type: 'button', class: 'pure-button-primary sign_up_btn')
     = f.input :remember_me, label: false, inline_label: 'Remember me', as: :boolean
