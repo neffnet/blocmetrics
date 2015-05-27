@@ -19,7 +19,7 @@
     </div>
     <div id="user-status">
       <% if current_user %>
-        <span>Welcome, <%= current_user.username %></span>
+        <span>Welcome, <%= link_to current_user.username, user_path(current_user) %></span>
       <% else %>
         <%= render 'devise/sessions/sign_in' %>
       <% end %>
