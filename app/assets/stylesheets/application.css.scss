@@ -24,13 +24,16 @@ $bluish: #92BBAA;
 $gray: #605058;
 
 body {
+  color: $gray;
   background-color: $bluish;
   a:visited{color:inherit;}
-  a:hover{color: black}
+  a:hover{color: white;}
+  font-size: 115%;
 }
 
 #container {
   border-top: 12px solid $red;
+  border-bottom: 12px solid $gray;
 }
 
 #main-flash {
@@ -53,10 +56,11 @@ body {
   color: $bluish;
   min-height: 450px;
   word-wrap: break-word;
-  border-radius: 0 15em/0.8em;
+  border-radius: 0 15em/1.1em;
   
-  a{color:$gray}
-  a:hover{color: white;}
+  a{color:$bluish;}
+  h2 a {color:$gray;}
+  a:hover{color:white;}
 
   #user-status{
     position: relative;
@@ -68,11 +72,12 @@ body {
     top:-15px;
   }
 
+  input {max-width: 100%;}
+
   .pure-button-primary {
-    width: 40%;
+    width: 45%;
     display: inline-block;
     border-radius: 5px;
-    font-size: 115%;
     text-align: center;
     padding: .5em 0;
   }
@@ -106,8 +111,7 @@ body {
 }
 
 .hugest {
-  font-family:"Times New Roman", Times, serif;
-  font-size: 2000%;
+  font-size: 1800%;
   word-wrap: break-word;
   line-height: 0.75em;
   letter-spacing: -34px;
