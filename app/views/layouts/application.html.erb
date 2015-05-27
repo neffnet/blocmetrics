@@ -19,13 +19,14 @@
     </div>
     <div id="user-status">
       <% if current_user %>
-        <span>Welcome, <%= current_user.username %> || <%= link_to "Log out", destroy_user_session_path, method: :delete %></span>
+        <span>Welcome, <%= current_user.username %></span>
       <% else %>
         <%= render 'devise/sessions/sign_in' %>
       <% end %>
     </div>
 <ul id="left-links">
     <% if current_user %>
+      <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       <li><%= link_to "User Details", edit_user_registration_path %></li>
     <% end %>
     <li><%= link_to "About", welcome_about_path %></li>
