@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150526174404) do
+ActiveRecord::Schema.define(version: 20150527224642) do
+
+  create_table "domains", force: :cascade do |t|
+    t.string   "name"
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
+
+  add_index "domains", ["url"], name: "index_domains_on_url", unique: true
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
