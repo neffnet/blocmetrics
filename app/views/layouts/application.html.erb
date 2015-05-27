@@ -13,29 +13,25 @@
   <body>
   <div id="container" class="pure-g">
 
-  <div id="top-bar" class="pure-g">
-    <div class="pad-box">
-      <div id="user-status" class="pure-u-2-5">
+  <div id="left-bar" class="pure-u-1-5"><div class="pad-box">
+    <div id="home-link">
+      <h2><a href="/">BlocMetrics</a></h2>
+    </div>
+    <div id="user-status">
       <% if current_user %>
         <span>Welcome, <%= link_to current_user.username, edit_user_registration_path %> || <%= link_to "Log out", destroy_user_session_path, method: :delete %></span>
       <% else %>
-        <%= link_to "Sign In", new_user_session_path %> || <%= link_to "Sign Up", new_user_registration_path %></span>
+        <%= render 'devise/sessions/sign_in' %>
+        <%= link_to "Sign Up", new_user_registration_path %></span>
       <% end %>
       </div>
-      <div id="about" class="pure-u-3-5">
-        <%= link_to "About", welcome_about_path %>
-      </div>
+  </div></div>
+  <div id="main-content" class="pure-u-4-5">
+    <div class="pad-box">
+<%= render 'welcome/show_flash' %>
+  <%= yield %>
     </div>
   </div>
-    <div id="left-bar" class="pure-u-1-5">
-      <h2><a href="/">BlocMetrics</a></h2>
-    </div>
-    <div id="main-content" class="pure-u-4-5">
-      <div class="pad-box">
-<%= render 'welcome/show_flash' %>
-    <%= yield %>
-      </div>
-    </div>
 
   </div>
   </body>

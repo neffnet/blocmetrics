@@ -1,0 +1,7 @@
+#login_form
+  %h4 User Sign In
+  = simple_form_for(:user, :url => session_path(:user), :html => {:class => 'pure-form pure-form-stacked'}) do |f|
+    = f.input :username, autofocus: true, placeholder: 'username', label: false
+    = f.input :password, placeholder: 'password', label: false
+    = f.button :submit, 'Sign In', class: 'pure-button-primary'
+    = f.input :remember_me, label: false, inline_label: 'Remember me', as: :boolean

@@ -26,6 +26,11 @@ $gray: #605058;
 body {
   background-color: $bluish;
   a:visited{color:inherit;}
+  a:hover{color: black}
+}
+
+#container {
+  border-top: 12px solid $red;
 }
 
 #main-flash {
@@ -35,35 +40,54 @@ body {
   top: 2.1em;
   padding: 1em;
   border-radius: 1em;
+  max-width: 33%;
   opacity: 0.9;
 }
 #main-flash.success { background-color: $green; }
 #main-flash.alert { background-color: $orange; }
 
-.pad-box {
-  padding: 1em;
-}
+.pad-box {padding: 1em;}
 
-#top-bar {
-  background-color: $red;
-
-    a {
-      color: $gray;
-      font-weight: bold;
-    }
-    a:hover {
-      color: gray;
-    }
-
-    #about {
-      position: relative;
-      text-align: right;
-      right: 4em;
-    }
-}
 #left-bar {
   background-color: $red;
   color: $bluish;
+  min-height: 450px;
+  word-wrap: break-word;
+  border-radius: 0 15em/0.8em;
+  
+  .btn {
+    border-radius: 5px;
+    font-size: 115%;
+    padding: 0.4em 2em;
+  }
+  a{color:$gray}
+  a:hover{color: white;}
+
+  #user-status{
+    position: relative;
+    top: -20px;
+  }
+
+  form {
+    position: relative;
+    top:-15px;
+  }
+}
+
+#home-link {
   text-align: center;
-  min-height: 50em;
+  position: relative;
+  top: -0.8em;
+  word-wrap: break-word;
+}
+
+.hugest {
+  font-family:"Times New Roman", Times, serif;
+  font-size: 2000%;
+  word-wrap: break-word;
+  line-height: 0.75em;
+  letter-spacing: -34px;
+  color: $orange;
+  font-weight: bold;
+  margin: 0px;
 }
