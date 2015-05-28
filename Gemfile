@@ -17,6 +17,8 @@ gem 'purecss-rails'
 gem 'simple_form'
 # Devise for user authentication
 gem 'devise'
+# Pundit for user authorization
+gem 'pundit'
 # Use Puma web sever
 gem 'puma'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
