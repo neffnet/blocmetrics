@@ -1,5 +1,6 @@
 class Domain < ActiveRecord::Base
   belongs_to :user
+  has_many :events, dependent: :destroy
 
   before_validation :strip_prefix
 

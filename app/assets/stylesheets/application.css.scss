@@ -77,6 +77,14 @@ body {
   box-shadow: inset 0 100px 0 0 white;
   color: $orange;
 }
+.new_domain_btn {
+  width: auto;
+  padding: 0.5em;
+  color: white !important;
+}
+.new_domain_btn:hover {
+  color: $greenish !important;
+}
 .delete_btn{
   background: $orange;
   box-shadow: inset 0 0 0 0 $orange;
