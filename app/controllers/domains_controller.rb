@@ -26,6 +26,8 @@ class DomainsController < ApplicationController
   def show
     @domain = Domain.find(params[:id])
     authorize @domain
+
+    @events = @domain.events.group_by(&:name)
   end
 
   def destroy

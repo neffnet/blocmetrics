@@ -8,6 +8,17 @@
   %h1 #{@domain.name}
   %span#info= link_to @domain.url, 'http://'+@domain.url
 
+  #events
+    %h2 Events
+    - if !@events.any?
+      %p No events tracked yet
+    - else
+      %ul
+      -@events.each do |k,v|
+        =content_tag :li do
+          =k + ": #{k.length}"
+
+
   #delete-domain
     %h3 Delete this domain
     %p If you no longer need to track events for this application, you can delete it. Please note that we will delete all associated event data and this action cannot be undone.
