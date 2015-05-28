@@ -7,3 +7,9 @@
 
   %h1 #{@domain.name}
   %span#info= link_to @domain.url, 'http://'+@domain.url
+
+  #delete-domain
+    %h3 Delete this domain
+    %p If you no longer need to track events for this application, you can delete it. Please note that we will delete all associated event data and this action cannot be undone.
+
+    = button_to "Delete", domain_path(@domain), method: :delete, class: "pure-button delete_btn", data: {confirm: "Are you sure?"}

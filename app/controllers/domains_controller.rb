@@ -25,9 +25,20 @@ class DomainsController < ApplicationController
 
   def show
     @domain = Domain.find(params[:id])
+    authorize @domain
   end
 
   def destroy
+    @domain = Domain.find(params[:id])
+    authorize @domain
+
+    if @domain.destroy
+      flash[:notice] = "Your domain has been deleted"
+      redirect_to current_user
+    else
+      flash[:error] = "Something went wrong. Please try again."
+      redirect_to current_user
+    end    
   end
 
   private
