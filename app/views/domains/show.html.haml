@@ -1,7 +1,9 @@
-%ul.nav
-  %li= link_to "BlocMetrics", root_path
-  %li= link_to current_user.username, user_path(current_user)
-  %li Your Domains
-  %li= link_to @domain.name, @domain
+#domain-show
+  %ul.nav
+    %li= link_to "BlocMetrics", root_path
+    %li= link_to current_user.username, user_path(current_user)
+    %li Your Domains
+    %li= link_to @domain.name, @domain
 
-%h1 #{@domain.name}
+  %h1 #{@domain.name}
+  %span#info= link_to @domain.url, 'http://'+@domain.url

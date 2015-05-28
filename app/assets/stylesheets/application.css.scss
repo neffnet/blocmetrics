@@ -127,6 +127,17 @@ body {
 
 }
 
+#domain-show {
+  a{color:white;}
+  a:hover{color:$gray;}
+  #info{
+    font-size: 80%;
+    position:relative;
+    top: -36px;
+    left: 20px;
+  }
+}
+
 #home-link {
   text-align: center;
   position: relative;
@@ -148,7 +159,7 @@ body {
   font-size: 67%;
   padding: 0.5em;
   border-radius: 4px;
-
+  a:hover {color: $bluish !important;}
   li {
     display: inline;
   }
