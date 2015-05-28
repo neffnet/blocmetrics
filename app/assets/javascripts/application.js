@@ -25,7 +25,7 @@ $(document).ready(function(){
   if ($('#main-flash').length >= 0) {
     setTimeout(function(){
         $('#main-flash .close').click();
-      }, 2000);
+      }, 5000);
     }
 
   });

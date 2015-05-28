@@ -1,4 +1,5 @@
 class DomainsController < ApplicationController
+  before_action :authenticate_user!
 
   def new
     @domain = Domain.new
@@ -11,7 +12,7 @@ class DomainsController < ApplicationController
       flash[:notice] = "New domain added!"
       redirect_to @domain
     else
-      flash[:error] = "Something went wrong, please try again."
+      flash[:error] = 'Action not completed: something went wrong!'
       render :new
     end
   end
@@ -23,6 +24,7 @@ class DomainsController < ApplicationController
   end
 
   def show
+    @domain = Domain.find(params[:id])
   end
 
   def destroy

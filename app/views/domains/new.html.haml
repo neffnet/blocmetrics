@@ -1,3 +1,10 @@
 #new-domain  
   %h1 Claim a new domain
-  %p Fill out the form below to register a new domain for your account.
+  =simple_form_for([current_user, @domain], html: {class: 'pure-form pure-form-stacked'}) do |f|
+    =f.input :name, autofocus: true, label: "Application Name", placeholder: 'Application Name'
+    %small Example: MySite, MySite.com
+    %br
+    =f.input :url, label: 'URL', placeholder: "URL"
+    %small Example: MySite.com, http://www.MySite.com
+    %br
+    =f.submit :submit, class: 'pure-button pure-button-primary'
