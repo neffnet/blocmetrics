@@ -128,6 +128,13 @@ body {
   word-wrap: break-word;
 }
 
+#edit_user {
+
+  .user_current_password {
+    color: $red;
+  }
+}
+
 .hugest {
   font-size: 1987%;
   word-wrap: break-word;

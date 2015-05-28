@@ -1,20 +1,25 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+    <h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div id="edit-user" class="pure-g">
+  <div class="pure-u-1-2">
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'pure-form pure-form-stacked', method: :put}) do |f| %>
-  <%= devise_error_messages! %>
-    <%= f.input :username, placeholder: 'username' %>
-    <%= f.input :email, placeholder: 'email' %>
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-    <%= f.input :password, autocomplete: "off", placeholder: 'new password',label: "Leave blank if no pw change:" %>
-    <%= f.input :password_confirmation, autocomplete: "off", placeholder: 'confirm new password' %>
-    <%= f.input :current_password, autocomplete: "off", placeholder: 'current password to save changes' %>
-    <%= f.submit "Save", class: 'pure-button pure-button-primary' %>
-<% end %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'pure-form pure-form-stacked', method: :put}) do |f| %>
+      <%= devise_error_messages! %>
+        <%= f.input :username, placeholder: 'username' %>
+        <%= f.input :email, placeholder: 'email' %>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+        <%= f.input :password, autocomplete: "off", placeholder: 'new password',label: "Leave blank if no change:" %>
+        <%= f.input :password_confirmation, autocomplete: "off", placeholder: 'confirm new password' %>
+        <%= f.input :current_password, required: true, autocomplete: "off", placeholder: 'current password' %>
+        <%= f.submit "Save", class: 'pure-button pure-button-primary' %>
+    <% end %>
+  </div>
+  <div class="pure-u-1-2">
+    <%= render 'devise/shared/links' %>
+    <h3>Cancel my account</h3>
+    <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'pure-button' %></p>
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'pure-button' %></p>
-
-<%= link_to "Back", :back %>
+    <%= link_to "Back", :back %>
+  </div>
+</div>
