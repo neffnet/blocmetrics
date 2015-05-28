@@ -23,6 +23,8 @@ gem 'puma'
 gem 'rails', '4.2.1'
 # Use haml templates
 gem 'haml'
+# Faker fake faker faker
+gem 'faker'
 # Figaro for configuration
 gem 'figaro'
 # Use SCSS for stylesheets
