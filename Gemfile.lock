@@ -106,8 +106,6 @@ GEM
     pg (0.18.2)
     puma (2.11.2)
       rack (>= 1.1, < 2.0)
-    pundit (1.0.1)
-      activesupport (>= 3.0.0)
     purecss-rails (0.6.0)
       railties (>= 3.2.6, < 5)
     rack (1.6.1)
@@ -202,7 +200,6 @@ DEPENDENCIES
   jquery-rails
   pg
   puma
-  pundit
   purecss-rails
   rails (= 4.2.1)
   rails_12factor

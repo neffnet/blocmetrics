@@ -24,15 +24,12 @@ class DomainsController < ApplicationController
   end
 
   def show
-    @domain = Domain.find(params[:id])
-    authorize @domain
-
+    @domain = current_user.domains.find(params[:id])
     @events = @domain.events.group_by(&:name)
   end
 
   def destroy
-    @domain = Domain.find(params[:id])
-    authorize @domain
+    @domain = current_user.domains.find(params[:id])
 
     if @domain.destroy
       flash[:notice] = "Your domain has been deleted"
