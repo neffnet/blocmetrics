@@ -1,1 +1,7 @@
+%ul.nav
+  %li= link_to "BlocMetrics", root_path
+  %li= link_to current_user.username, user_path(current_user)
+  %li Your Domains
+  %li= link_to @domain.name, @domain
+
 %h1 #{@domain.name}

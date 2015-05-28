@@ -4,7 +4,7 @@
     =f.input :name, autofocus: true, label: "Application Name", placeholder: 'Application Name'
     %small Example: MySite, MySite.com
     %br
-    =f.input :url, label: 'URL', placeholder: "URL"
+    =f.input :url, label: 'URL', placeholder: "URL", as: "string"
     %small Example: MySite.com, http://www.MySite.com
     %br
     =f.submit :submit, class: 'pure-button pure-button-primary'

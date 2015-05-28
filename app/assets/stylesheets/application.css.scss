@@ -141,6 +141,20 @@ body {
   }
 }
 
+.nav {
+  display: inline-block;
+  background-color: $gray;
+  color: $bluish;
+  font-size: 67%;
+  padding: 0.5em;
+  border-radius: 4px;
+
+  li {
+    display: inline;
+  }
+  li::before {content: "<< "}
+}
+
 .hugest {
   font-size: 1987%;
   word-wrap: break-word;
