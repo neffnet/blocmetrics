@@ -26,7 +26,6 @@ $gray: #605058;
 body {
   color: $gray;
   background-color: $bluish;
-  a:visited{color:inherit;}
   a:hover{color: white;}
   font-size: 115%;
 }
@@ -147,6 +146,14 @@ body {
   h1 {
     color: white;
     text-shadow: 1px 0 4px $gray;
+  }
+
+  ul {display: inline-block;}
+  li {
+    border: 2px solid $gray;
+    padding: 0.6em;
+    margin-bottom: 8px;
+    border-radius: 3px / 12px;
   }
 
   #user-stats {
