@@ -15,6 +15,8 @@ end
 gem 'purecss-rails'
 # Simple Form helper
 gem 'simple_form'
+# Something to do with CORS
+gem 'rack-cors', :require => 'rack/cors'
 # Devise for user authentication
 gem 'devise'
 # Use Puma web sever
