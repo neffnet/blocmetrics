@@ -93,10 +93,15 @@ body {
 .new_domain_btn {
   width: auto;
   padding: 0.5em;
-  color: white !important;
+  color: white;
+  border: 1px solid $green;
+  -webkit-transition: all ease 0.8s;
+  transition: all ease 0.8s;
 }
 .new_domain_btn:hover {
-  color: $greenish !important;
+  color: black;
+  background-color: $green;
+  border: 2px solid $gray;
 }
 .delete_btn{
   background: $orange;
@@ -148,7 +153,14 @@ body {
     text-shadow: 1px 0 4px $gray;
   }
 
-  ul {display: inline-block;}
+  #domains-list {
+    position: relative;
+    top: -1.5em;
+  }
+
+  ul {
+    display: inline-block;
+  }
   li {
     border: 2px solid $gray;
     padding: 0.6em;

@@ -2,14 +2,15 @@
   #user-domains.pure-u-4-5  
     %h1 #{@user.username}
     %h2 Your Domains
-    - if @user.domains.any?
-      %ul#domains-list
-        - @user.domains.each do |d|
-          = content_tag :li do
-            = link_to d.name, domain_path(d)
-            > recording #{d.events.group_by(&:name).length} event types
-    %br
-    = link_to "New Domain", new_user_domain_path(current_user), class: 'pure-button pure-button-primary new_domain_btn'
+    #domains-list
+      - if @user.domains.any?
+        %ul
+          - @user.domains.each do |d|
+            = content_tag :li do
+              = link_to d.name, domain_path(d)
+              > recording #{d.events.group_by(&:name).length} event types
+      %br
+      = link_to "New Domain", new_user_domain_path(current_user), class: 'pure-button pure-button-primary new_domain_btn'
   #user-stats.pure-u-1-5
     .pad-box
 
