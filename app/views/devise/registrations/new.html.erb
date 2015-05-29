@@ -4,7 +4,7 @@
   <%= devise_error_messages! %>
     <%= f.input :username, placeholder: 'username', autofocus: true %>
     <%= f.input :email, placeholder: 'email' %>
-    <%= f.input :password, autocomplete: "off" %>
-    <%= f.input :password_confirmation, autocomplete: "off" %>
+    <%= f.input :password, placeholder: 'password', autocomplete: "off" %>
+    <%= f.input :password_confirmation, placeholder: 'confirm password', autocomplete: "off" %>
     <%= f.submit "Sign up", class: 'pure-button pure-button-primary' %>
 <% end %>
