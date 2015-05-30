@@ -9,11 +9,11 @@ class API::EventsController < ApplicationController
     if !domain
       render json: "URL not recognized", status: :unprocessable_entity
     else
-      e = domain.events.new(event_params)
-      if e.save
-        render json: e, status: :created
+      @e = domain.events.new(event_params)
+      if @e.save
+        render json: @e, status: :created
       else
-        render e.errors, status: :unprocessable_entity
+        render @e.errors, status: :unprocessable_entity
       end
     end
   end
@@ -21,6 +21,6 @@ class API::EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:event_name)
+    params.require(:event).permit(:name)
   end
 end
