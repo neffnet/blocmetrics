@@ -22,6 +22,7 @@ $greenish: #B3A724;
 $green: #5FB324;
 $bluish: #92BBAA;
 $gray: #605058;
+$light_gray: #D3D3D3;
 
 body {
   color: $gray;
@@ -147,10 +148,15 @@ body {
   }
 }
 
+#user-show-name {
+  color: white;
+  text-shadow: 1px 0 4px $gray;  
+}
 #user-show {
-  h1 {
-    color: white;
-    text-shadow: 1px 0 4px $gray;
+
+  #user-domains {
+    position: relative;
+    top: -2em;
   }
 
   #domains-list {
@@ -167,15 +173,6 @@ body {
     margin-bottom: 8px;
     border-radius: 3px / 12px;
   }
-
-  #user-stats {
-
-    .pad-box {
-      min-height: 500px;
-      border-left: 2px solid $gray;
-    }
-  }
-
 }
 
 #domain-show {
@@ -186,6 +183,16 @@ body {
     position:relative;
     top: -36px;
     left: 20px;
+  }
+}
+
+#how-to {
+  position: relative;
+  top: -2em;
+
+  h2 {
+    color: $red;
+    text-align: center;
   }
 }
 
@@ -227,4 +234,25 @@ body {
   margin: 0px;
 }
 
-.error {color: $red;}
+.error {color: $red !important;}
+.green {color: $green !important;}
+
+pre {
+  border: 4px dashed $greenish;
+  background-color: $light_gray;
+  color: black;
+  border-radius: 5px;
+  padding: 0.4em 0.7em;
+}
+code {
+  white-space: pre-wrap;
+}
+.inline {display:inline;}
+.code-span {
+  font-family: monospace;
+  font-size: 1.3em;
+  padding: 0 4px;
+  border: none;
+  background-color: $light_gray;
+  color: black;
+}

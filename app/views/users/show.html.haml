@@ -1,6 +1,6 @@
+%h1#user-show-name #{@user.username}
 #user-show.pure-g
-  #user-domains.pure-u-4-5  
-    %h1 #{@user.username}
+  #user-domains.pure-u-2-5
     %h2 Your Domains
     #domains-list
       - if @user.domains.any?
@@ -11,6 +11,41 @@
               > recording #{d.events.group_by(&:name).length} event types
       %br
       = link_to "New Domain", new_user_domain_path(current_user), class: 'pure-button pure-button-primary new_domain_btn'
-  #user-stats.pure-u-1-5
+  #how-to.pure-u-3-5
     .pad-box
-
+      %h2 How do I work this?
+      .register
+        %h3 1: Register your domain
+        %p Add your web app to your list of registered domains on the left
+      .snippet
+        %h3 2: Add the code snippet
+        %p
+          Copy the javascript snippet and include it in the pages you want to track:
+          %pre
+            %code
+              #{h "<script>"}blocmetrics={report:function(e){var t={name:e},n=new XMLHttpRequest;n.open("POST","https://neffnet-blocmetrics/api/events",!0),n.setRequestHeader("Content-Type","application/json"),n.onreadystatechange=function(){},n.send(JSON.stringify(t))}};#{h "</script>"}
+          %small
+            It relies on javascript being enabled in the user's broswer, but does not require any additional libraries such as jQuery.
+      .track
+        %h3 3: Start tracking events
+        %p The javascript snippet above provides one function:
+        %pre.inline
+          %code blocmetrics.report(#{ content_tag(:span, class: 'green'){'"event_name"'} });
+        %p
+          Now you can call this
+          %span.code-span report
+          method anywhere in your application's javascript to start tracking custom events. You may pass in any
+          %span.green.code-span "event_name"
+          you like as a string. For example, you might want to track page loads on a particular page like so:
+          %pre
+            %code= h('<body onload="blocmetrics.report(') + "'foo-page_load')" + h('">')
+          You can track click events by adding
+          %span.code-span blockmetrics.report()
+          to your event listeners:
+          %pre
+            %code
+              :preserve
+                document.getElementByID("myBtn").addEventListener("click", function(){
+                  blockmetrics.report("myBtn_click");
+                  // your button logic here...
+                });
