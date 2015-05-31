@@ -23,7 +23,7 @@
           Copy the javascript snippet and include it in the pages you want to track:
           %pre
             %code
-              #{h "<script>"}blocmetrics={report:function(e){var t={name:e},n=new XMLHttpRequest;n.open("POST","https://neffnet-blocmetrics/api/events",!0),n.setRequestHeader("Content-Type","application/json"),n.onreadystatechange=function(){},n.send(JSON.stringify(t))}};#{h "</script>"}
+              #{h "<script>"}blocmetrics={report:function(e){var t={name:e},n=new XMLHttpRequest;n.open("POST","https://neffnet-blocmetrics.herokuapp.com/api/events",!0),n.setRequestHeader("Content-Type","application/json"),n.onreadystatechange=function(){},n.send(JSON.stringify(t))}};#{h "</script>"}
           %small
             It relies on javascript being enabled in the user's broswer, but does not require any additional libraries such as jQuery.
       .track
