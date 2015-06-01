@@ -184,6 +184,12 @@ body {
     top: -36px;
     left: 20px;
   }
+
+  #events-pie, #events-line {
+    position: absolute;
+    top: 6em;
+  }
+  #events-line{right:0;}
 }
 
 #how-to {

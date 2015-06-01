@@ -15,6 +15,8 @@ end
 gem 'purecss-rails'
 # Chartkick to make visual graphs
 gem 'chartkick'
+# Dateslices because groupdate didn't work
+gem 'dateslices'
 # Simple Form helper
 gem 'simple_form'
 # Something to do with CORS
