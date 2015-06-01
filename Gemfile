@@ -13,6 +13,8 @@ group :development do
 end
 # Yahoo PureCSS framework
 gem 'purecss-rails'
+# Chartkick to make visual graphs
+gem 'chartkick'
 # Simple Form helper
 gem 'simple_form'
 # Something to do with CORS

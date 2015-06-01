@@ -1,3 +1,4 @@
+= javascript_include_tag "//www.google.com/jsapi", "chartkick"
 #domain-show
   %ul.nav
     %li= link_to "BlocMetrics", root_path
@@ -13,11 +14,16 @@
     - if !@events.any?
       %p No events tracked yet
     - else
-      %ul
-      -@events.each do |k,v|
-        =content_tag :li do
-          =k + ": #{v.length}"
-
+      #event-graphs.pure-g
+        #events-list.pure-u-1-5
+          %ul
+          -@events.each do |k,v|
+            =content_tag :li do
+              =k + ": #{v.length}"
+        #events-pie.pure-u-2-5
+          = pie_chart @domain.events.group(:name).count
+        #events-line.pure-u-2-5
+          
 
   #delete-domain
     %h3 Delete this domain
