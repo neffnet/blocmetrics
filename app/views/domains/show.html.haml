@@ -23,7 +23,7 @@
         #events-pie.pure-u-2-5
           = pie_chart @domain.events.group(:name).count, library: {title: 'Total Events by Type',backgroundColor: 'none'}
         #events-line.pure-u-2-5
-          = line_chart @domain.events.group_by_day(:created_at), library: {title: 'Total Events by Day', backgroundColor: "none"} 
+          = line_chart @domain.events.group_by_day(:created_at), library: {title: 'Total Events by Day', backgroundColor: "none", hAxis:{color: "white", baselineColor: "white", format: 'MMM d', showTextEvery: 2}, vAxis:{format: '0', color: "white", baselineColor: "white", gridlines: {color:"white"}} } 
 
   #delete-domain
     %h3 Delete this domain
